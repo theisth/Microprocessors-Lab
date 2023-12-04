@@ -20,24 +20,24 @@ void num_six(int t);			// Seven Segment Number 6
 void num_seven(int t);			// Seven Segment Number 7
 void num_eight(int t);			// Seven Segment Number 8
 void num_nine(int t);			// Seven Segment Number 9
-void led4(int a); 				// 4 Digit 7 Segment LED4 Number Changer
-void led3(int b); 				// 4 Digit 7 Segment LED3 Number Changer
-void led2(int c); 				// 4 Digit 7 Segment LED2 Number Changer
-void led1(int d); 				// 4 Digit 7 Segment LED1 Number Changer
+void led4(int a); 			// 4 Digit 7 Segment LED4 Number Changer
+void led3(int b); 			// 4 Digit 7 Segment LED3 Number Changer
+void led2(int c); 			// 4 Digit 7 Segment LED2 Number Changer
+void led1(int d); 			// 4 Digit 7 Segment LED1 Number Changer
 void GPIO_config(void); 		// GPIO Configuration
-void action(void);				// Base Code
+void action(void);			// Base Code
 void onFinish_led(void);		// Finish LED On Mode
 void offFinish_led(void);		// Finish LED On Mode
 void RCC_config(void);			// RCC Configuration
 
-int digit4;						// Digit 4 Counter
-int digit3;						// Digit 3 Counter
-int digit2;						// Digit 2 Counter
-int digit1;						// Digit 1 Counter
-int millis;						// Systick Counter
-int counter;					// Step Counter
-int stop_ct = 0;				// Stop Counter
-int flag = 0;					// Finish Flag
+int digit4;				// Digit 4 Counter
+int digit3;				// Digit 3 Counter
+int digit2;				// Digit 2 Counter
+int digit1;				// Digit 1 Counter
+int millis;				// Systick Counter
+int counter;				// Step Counter
+int stop_ct = 0;			// Stop Counter
+int flag = 0;				// Finish Flag
 
 
 
@@ -80,9 +80,9 @@ void systickInit(void)
 	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk; 	// counter activated
 	SysTick->LOAD = 49;                     	// Reload value
 	SysTick->VAL=0;                        		// reset counter
-	SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;  // interrupt activated
-	SysTick->CTRL &= ~(1<<2);                   // Systick clock source = AHB/8
-	NVIC_EnableIRQ(SysTick_IRQn);     			// NVIC activated
+	SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;  	// interrupt activated
+	SysTick->CTRL &= ~(1<<2);                   	// Systick clock source = AHB/8
+	NVIC_EnableIRQ(SysTick_IRQn);     		// NVIC activated
 	NVIC_SetPriority (SysTick_IRQn,0);  		// Priority set
 
 }
@@ -501,7 +501,7 @@ void onFinish_led(void)
 
 void offFinish_led(void)
 {
-    GPIOC->ODR &= (0x00); 				// PC6 Board LED Off
+    GPIOC->ODR &= (0x00); 			// PC6 Board LED Off
 }
 
 void RCC_config(void)
