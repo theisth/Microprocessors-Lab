@@ -128,8 +128,8 @@ void GPIO_config(void) // GPIO configuration function
 	/* Setup PB8 as input */
 	GPIOB->MODER &= ~(3U << 2*8);
 	/*Setup PC6 as output */
-    GPIOC->MODER &= ~(3U << 2*6);
-    GPIOC->MODER |= (1U << 2*6);
+    	GPIOC->MODER &= ~(3U << 2*6);
+   	GPIOC->MODER |= (1U << 2*6);
 
 
 }
