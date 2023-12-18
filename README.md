@@ -12,4 +12,8 @@
 
   * LAB3 - Problem 1/ SysTick Timer with Register C
   * LAB3 - Problem 2/ LED Time Delay Settings Using EXTI with Register C
-  * LAB3 - Problem 3/ 4 Digit Seven Segment Application with Register C (0000 to 9999 10 sec.)  
+  * LAB3 - Problem 3/ 4 Digit Seven Segment Application with Register C (0000 to 9999 10 sec.)
+ 
+  * LAB4 - Problem 1/ USART with Register C
+  * LAB4 - Problem 2/ PWM LED Brightness Application with Register C
+  * LAB4 - Problem 3/ Keypad, PWM and USART Application with Register C  
